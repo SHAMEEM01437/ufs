@@ -1,5 +1,9 @@
 .top_header {
+<<<<<<< HEAD
     background: #2A395A;
+=======
+    background: var(--theme_color1);
+>>>>>>> 63b09bfcd81024aa35b9025fda6757a1231f1793
 }
 .top_right_list{
     display:flex;
@@ -53,12 +57,21 @@
 }
 
 .top_right_list li a:hover{
+<<<<<<< HEAD
     background:#E4AE2D;
     color:#383535;
 }
 .top_right_list li:first-child a{
     background:#E4AE2D;
     color:#383535;
+=======
+    background:var(--theme_color2);
+    color:var(--theme_color1);
+}
+.top_right_list li:first-child a{
+    background:var(--theme_color2);
+    color:var(--theme_heading_color);
+>>>>>>> 63b09bfcd81024aa35b9025fda6757a1231f1793
 }
 
 .top_right_list li span{
@@ -118,7 +131,11 @@
 
 .social_list li a:hover{
     background:#fff;
+<<<<<<< HEAD
     color:#E4AE2D;
+=======
+    color:var(--theme_color2);
+>>>>>>> 63b09bfcd81024aa35b9025fda6757a1231f1793
     transform:translateY(-2px);
 }
 

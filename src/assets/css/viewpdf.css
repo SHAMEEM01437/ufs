@@ -1,0 +1,132 @@
+:root{
+    --bg:#1c1f26; --toolbar-bg:#14161b; --accent:#e4ae2d;
+    --text:#eef1f6; --muted:#8a90a2; --menu-bg:#22252d;
+  }
+  *{box-sizing:border-box;}
+  html,body{ margin:0; padding:0; font-family:'Segoe UI',Arial,sans-serif; color:var(--text); }
+
+
+  /* ============ MODAL ============ */
+  #flipbookModal{
+    display:none; position:fixed; inset:0; background:rgba(0,0,0,.85);
+    z-index:9999; align-items:center; justify-content:center;
+  }
+  #flipbookModal.open{ display:flex; }
+  #modalInner{
+    width:100%; height:100%; background:var(--bg);
+    display:flex; flex-direction:column; position:relative;
+  }
+ #closeModalBtn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    z-index: 20;
+    background: var(--accent);
+    border: none;
+    color: var(--text);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+  #closeModalBtn:hover{ background:rgba(255,255,255,.18); }
+
+  /* Upload screen (shown only if no preset source configured) */
+  #uploadScreen{
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:20px; text-align:center; padding:20px;
+  }
+  #uploadScreen h1{ font-size:24px; font-weight:600; margin:0; }
+  #uploadScreen p{ color:var(--muted); margin:0; font-size:14px; }
+  .upload-actions{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  .upload-btn{
+    background:var(--accent); color:#1c1f26; border:none; padding:12px 22px;
+    border-radius:8px; font-size:14px; font-weight:600; cursor:pointer;
+  }
+  .upload-btn.secondary{ background:transparent; color:var(--text); border:1px solid #333844; }
+  input[type=file]{ display:none; }
+
+  /* Viewer */
+  #viewerScreen{ display:none; flex:1; flex-direction:column; min-height:0; }
+  #bookStage{ flex:1; display:flex; align-items:center; justify-content:center; position:relative; min-height:0; padding:10px; }
+  #book{ box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  #book .page{ background:#fff; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  #book .page canvas, #book .page img{ width:100%; height:100%; object-fit:contain; display:block; }
+  #book .page .spinner{
+    width:26px; height:26px; border:3px solid #ddd; border-top-color:var(--accent);
+    border-radius:50%; animation:spin .8s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+ .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    z-index: 5;
+}
+  .nav-arrow:hover{ background:rgba(255,255,255,0.18); }
+  .nav-arrow.prev{ left:16px; } .nav-arrow.next{ right:16px; }
+  .nav-arrow:disabled{ opacity:.25; cursor:default; }
+
+  /* Toolbar — matches DearFlip style */
+  #toolbar{
+    background:var(--toolbar-bg); display:flex; align-items:center; justify-content:center;
+    gap:4px; padding:8px 14px; border-top:1px solid #23262f; flex-shrink:0; position:relative;
+  }
+  #pageIndicator{ font-size:13px; color:var(--muted); padding:0 10px; min-width:60px; text-align:center; }
+  .tb-btn{
+    background:transparent; border:none; color:var(--text); width:36px; height:36px;
+    border-radius:6px; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center;
+  }
+  .tb-btn:hover{ background:#23262f; }
+  .tb-btn.active{ background:var(--accent); color:#1c1f26; }
+
+  /* more menu */
+  #moreMenu{
+    display:none; position:absolute; bottom:52px; right:14px; background:var(--menu-bg);
+    border:1px solid #2c2f38; border-radius:8px; padding:6px; min-width:200px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4); z-index:30;
+  }
+  #moreMenu.open{ display:block; }
+  #moreMenu button{
+    display:flex; align-items:center; gap:10px; width:100%; background:none; border:none;
+    color:var(--text); font-size:13px; padding:9px 10px; border-radius:6px; cursor:pointer; text-align:left;
+  }
+  #moreMenu button:hover{ background:#2c2f38; }
+  #moreMenu .icon{ width:16px; text-align:center; }
+
+  /* grid/thumbnail overlay */
+  #gridOverlay{
+    display:none; position:absolute; inset:0; background:rgba(10,11,14,.97); z-index:15;
+    overflow-y:auto; padding:24px;
+  }
+  #gridOverlay.open{ display:block; }
+  #gridWrap{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(110px,1fr)); gap:14px; max-width:1000px; margin:0 auto;
+  }
+  .thumb{ cursor:pointer; border-radius:4px; overflow:hidden; border:2px solid transparent; background:#fff; aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; }
+  .thumb:hover{ border-color:var(--accent); }
+  .thumb img{ width:100%; height:100%; object-fit:contain; }
+  .thumb-label{ font-size:11px; color:var(--muted); text-align:center; margin-top:4px; }
+
+  #toast{
+    position:fixed; bottom:70px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:#2c2f38; color:var(--text); padding:10px 18px; border-radius:6px; font-size:13px;
+    opacity:0; transition:opacity .2s ease, transform .2s ease; pointer-events:none; z-index:50;
+  }
+  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
