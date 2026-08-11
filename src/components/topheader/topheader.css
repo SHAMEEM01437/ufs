@@ -1,0 +1,145 @@
+.top_header {
+    background: var(--theme_color1);
+}
+.top_right_list{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.top_right_list li{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    position:relative;
+    font-size:14px;
+    color:#fff;
+}
+/* .top_right_list li a,
+.top_right_list li span{
+    font-weight: 500;
+} */
+
+/* .top_right_list li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:-10px;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:16px;
+    background:rgba(255,255,255,.35);
+} */
+
+
+.top_right_list li i{
+    font-size:17px;
+    color:#fff;
+    line-height:1;
+}
+
+.top_right_list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ease;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 24px;
+    font-weight: 600;
+}
+
+.top_right_list li a:hover{
+    background:var(--theme_color2);
+    color:var(--theme_color1);
+}
+.top_right_list li:first-child a{
+    background:var(--theme_color2);
+    color:var(--theme_heading_color);
+}
+
+.top_right_list li span{
+    color:#fff;
+}
+
+@media (max-width:767px){
+    .top_right_list{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .top_right_list li{
+        font-size:13px;
+    }
+
+    .top_right_list li:not(:last-child)::after{
+        display:none;
+    }
+}
+
+.social_list{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.social_list .social_label{
+    color:#fff;
+    font-size:14px;
+    font-weight:500;
+    margin-right:4px;
+}
+
+.social_list li a{
+    width:26px;
+    height:26px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
+    transition:all .3s ease;
+}
+
+.social_list li a i{
+    font-size:12px;
+    line-height:1;
+}
+
+.social_list li a:hover{
+    background:#fff;
+    color:var(--theme_color2);
+    transform:translateY(-2px);
+}
+
+@media (max-width:767px){
+    .social_list{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .social_list .social_label{
+        width:100%;
+        text-align:center;
+        margin:0 0 8px;
+    }
+
+    .social_list li a{
+        width:30px;
+        height:30px;
+    }
+}
+
+/* ====================================
+Top Header End
+===================================== */
