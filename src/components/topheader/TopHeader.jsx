@@ -1,5 +1,10 @@
 import React from 'react'
 import './topheader.css'
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 const TopHeader = () => {
   return (
     <div>
@@ -12,25 +17,26 @@ const TopHeader = () => {
 
                         <li>
                             <a href="#" aria-label="Facebook">
-                                <i class="ri-facebook-fill"></i>
+                               <FaFacebookF />
                             </a>
                         </li>
 
                         <li>
                             <a href="#" aria-label="Twitter">
-                                <i class="ri-twitter-x-fill"></i>
+                                <FaXTwitter />
                             </a>
                         </li>
 
                         <li>
                             <a href="#" aria-label="LinkedIn">
-                                <i class="ri-linkedin-fill"></i>
+                               <FaLinkedinIn />
                             </a>
                         </li>
 
                         <li>
                             <a href="#" aria-label="Instagram">
-                                <i class="ri-instagram-line"></i>
+                                <FaInstagram />
+
                             </a>
                         </li>
                     </ul>

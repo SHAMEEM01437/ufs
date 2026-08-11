@@ -1,5 +1,5 @@
 .top_header {
-    background: var(--theme_color1);
+    background: #2A395A;
 }
 .top_right_list{
     display:flex;
@@ -53,12 +53,12 @@
 }
 
 .top_right_list li a:hover{
-    background:var(--theme_color2);
-    color:var(--theme_color1);
+    background:#E4AE2D;
+    color:#383535;
 }
 .top_right_list li:first-child a{
-    background:var(--theme_color2);
-    color:var(--theme_heading_color);
+    background:#E4AE2D;
+    color:#383535;
 }
 
 .top_right_list li span{
@@ -118,7 +118,7 @@
 
 .social_list li a:hover{
     background:#fff;
-    color:var(--theme_color2);
+    color:#E4AE2D;
     transform:translateY(-2px);
 }
 
