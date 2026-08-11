@@ -1,8 +1,13 @@
 import React from 'react'
+import MiddleHeader from './heaader/MiddleHeader'
+import TopHeader from './topheader/TopHeader'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <TopHeader />
+      <MiddleHeader />
+    </div>
   )
 }
 
