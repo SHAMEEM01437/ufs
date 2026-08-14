@@ -5,11 +5,11 @@ import Home from '../pages/Home'
 
 const AppRoutes = () => {
   return (
-      <Routes>
-        <Route element={<MainLayouts/>}>
-        <Route path='/' element={<Home/>} />
-        <Route/>
-      </Routes>
+    <Routes>
+      <Route element={<MainLayouts />}>
+         <Route path='/' element={<Home />} />
+      </Route>
+    </Routes>
   )
 }
 

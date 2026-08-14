@@ -1,19 +1,32 @@
+
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router-dom';
+import BrandLogo from  '../../assets/images/logo.png'
+import BrandLogoDark from  '../../assets/images/dark-logo.png'
 const MiddleHeader = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);  
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
-        <a className="navbar-brand" href="index.php">
+        
+        <Link className="navbar-brand" path="index.php">
           <img
-            src="assets/images/logo.png"
+            src={BrandLogo}
             alt="Brand Name"
             className="light_logo"
           />
           <img
-            src="assets/images/dark-logo.png"
+            src={BrandLogoDark}
             alt="Brand Name"
             className="dark_logo"
           />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,168 +41,157 @@ const MiddleHeader = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="index.php">
+              <Link className="nav-link" path="">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="about-us.php">
+              <Link className="nav-link" path="">
                 About us
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link"
-                href="#canvaMenuModal"
-                data-bs-toggle="offcanvas"
-                aria-controls="canvaMenuModal"
+                onClick={handleShow}
               >
                 Products
-              </a>
-              <div
-                className="offcanvas offcanvas-start dromDown_menuWrap"
-                tabindex="-1"
-                id="canvaMenuModal"
-                aria-labelledby="offcanvasExampleLabel"
-              >
-                <div className="offcanvas-header">
-                  <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-                    Products
-                  </h5>
-                  <button
+              </Link>
+               <Offcanvas show={show} onHide={handleClose}>
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Products</Offcanvas.Title>
+                    <button
                     type="button"
-                    className="btn-close text-reset"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
+                    onClick={handleClose}
                   ></button>
-                </div>
-                <div className="offcanvas-body">
+                  </Offcanvas.Header>
+                  <div className="offcanvas-body">
                   <div className="menuWrap">
                     <ul className="canvaMenu">
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Harness &amp; Belts
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Lanyards
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Hooks &amp; Connectors
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Retractable Fall Arrest Blocks
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Rope Access &amp; Rescue
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Confined Space Equipments
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Temporary Lifeline System
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Fixed Line Systems
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Anchorage
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Walkways
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Handrail Protection
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Aluminium Skylight Protection System
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Protective Mask
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Coverall Suit
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Net &amp; Rope Ladder
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Rescue &amp; Evacuation System
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           UFS Safety Shoes
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Eye Protection
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Ear Protection
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Head Protection
-                        </a>
+                        </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <a className="canvaMenuLink" href="#">
+                        <Link className="canvaMenuLink" path="/">
                           Welding Protection
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </div>
-              </div>
+                </Offcanvas>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="career.php">
+              <Link className="nav-link" path="career.php">
                 Career
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="certifications.php">
+              <Link className="nav-link" path="certifications.php">
                 Certifications
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact-us.php">
+              <Link className="nav-link" path="contact-us.php">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
           <form className="d-flex header_search">
