@@ -1,14 +1,13 @@
 import React from "react";
-import blog1 from "../../assets/images/blog/blog-1.webp";
-import blog2 from "../../assets/images/blog/blog-2.webp";
-import blog3 from "../../assets/images/blog/blog-3.webp";
-import blog4 from "../../assets/images/blog/blog-4.webp";
-import blog5 from "../../assets/images/blog/blog-5.webp";
+import { Link } from "react-router-dom";
+import blogData from "../blog/blogData.js";
+
 const Blog = () => {
   return (
     <section className="blog_section section_paddingY">
       <div className="container">
-        {/* Section Heading */}
+
+        {/* Heading */}
         <div className="row">
           <div className="col-md-12">
             <div className="section_heading text-center">
@@ -18,97 +17,59 @@ const Blog = () => {
           </div>
         </div>
 
-        {/* Blog Wrapper */}
+        {/* Blogs */}
         <div className="row">
           <div className="col-md-12">
             <div className="blog_wrapper">
-              {/* Featured Blog */}
-              <div className="blog_item featured_blog">
-                <a href="#" className="blog_img">
-                  <img
-                    src={blog1}
-                    alt="UFS Protects at Intersec Saudi Arabia"
-                  />
-                </a>
 
-                <div className="blog_content">
-                  <span className="blog_date">13 MAY 2026</span>
+              {blogData.map((blog) => (
+                <div
+                  className={`blog_item ${
+                    blog.featured ? "featured_blog" : ""
+                  }`}
+                  key={blog.id}
+                >
+                  <Link
+                    to={`/blog/${blog.id}`}
+                    className={
+                      blog.featured ? "blog_img" : "blog_thumb"
+                    }
+                  >
+                    <img src={blog.image} alt={blog.title} />
+                  </Link>
 
-                  <h3>
-                    <a href="#">
-                      UFS Protects at Intersec Saudi Arabia, Riyadh
-                    </a>
-                  </h3>
+                  {blog.featured ? (
+                    <div className="blog_content">
+                      <span className="blog_date">
+                        {blog.date}
+                      </span>
+
+                      <h3>
+                        <Link to={`/blog/${blog.id}`}>
+                          {blog.title}
+                        </Link>
+                      </h3>
+                    </div>
+                  ) : (
+                    <div className="blog_info">
+                      <span className="blog_tag">
+                        {blog.category}
+                      </span>
+
+                      <h5>
+                        <Link to={`/blog/${blog.id}`}>
+                          {blog.title}
+                        </Link>
+                      </h5>
+                    </div>
+                  )}
                 </div>
-              </div>
+              ))}
 
-              {/* Blog 2 */}
-              <div className="blog_item">
-                <a href="#" className="blog_thumb">
-                  <img src={blog2} alt="Mobile Anchor Device Training" />
-                </a>
-
-                <div className="blog_info">
-                  <span className="blog_tag">Fall Protection</span>
-
-                  <h5>
-                    <a href="#">Mobile Anchor Device Training</a>
-                  </h5>
-                </div>
-              </div>
-
-              {/* Blog 3 */}
-              <div className="blog_item">
-                <a href="#" className="blog_thumb">
-                  <img
-                    src={blog3}
-                    alt="UFS Protects at Intersec Saudi Arabia"
-                  />
-                </a>
-
-                <div className="blog_info">
-                  <span className="blog_tag">Fall Protection</span>
-
-                  <h5>
-                    <a href="#">
-                      UFS Protects at Intersec Saudi Arabia, Riyadh
-                    </a>
-                  </h5>
-                </div>
-              </div>
-
-              {/* Blog 4 */}
-              <div className="blog_item">
-                <a href="#" className="blog_thumb">
-                  <img src={blog4} alt="Rescue Training Program" />
-                </a>
-
-                <div className="blog_info">
-                  <span className="blog_tag">Fall Protection</span>
-
-                  <h5>
-                    <a href="#">Rescue Training Program</a>
-                  </h5>
-                </div>
-              </div>
-
-              {/* Blog 5 */}
-              <div className="blog_item">
-                <a href="#" className="blog_thumb">
-                  <img src={blog5} alt="Mobile Anchor Device Training" />
-                </a>
-
-                <div className="blog_info">
-                  <span className="blog_tag">Fall Protection</span>
-
-                  <h5>
-                    <a href="#">Mobile Anchor Device Training</a>
-                  </h5>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
