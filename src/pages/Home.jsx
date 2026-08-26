@@ -1,4 +1,7 @@
 import React from 'react'
+import Cta from "../components/cta/Cta";
+import Blog from "../components/blog/Blog";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 import 'swiper/css';
@@ -75,19 +78,11 @@ const Home = () => {
                 </div>
             </div>
     </Swiper>
-    {/* <section className="banner_section">
-        <div className="swiper banner_slider">
-            <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                    
-                </div>
-                <div className="swiper-slide">
-                    
-                </div>
-            </div>
-            
-        </div>
-    </section> */}
+    <Blog/>
+     <Cta/>
+     
+
+     
     
     </>
   )

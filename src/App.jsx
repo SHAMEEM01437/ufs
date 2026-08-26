@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/footer/Footer";
-import Cta from "./components/cta/Cta";
-import Blog from "./components/blog/Blog";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Blog/>
-      <Cta />
+      <Home />
       <Footer />
     </div>
   );
