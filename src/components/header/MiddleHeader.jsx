@@ -15,7 +15,7 @@ const MiddleHeader = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container">
         
-        <Link className="navbar-brand" path="index.php">
+        <Link className="navbar-brand" to="/">
           <img
             src={BrandLogo}
             alt="Brand Name"
@@ -41,12 +41,12 @@ const MiddleHeader = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" path="">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" path="">
+              <Link className="nav-link" to="/about">
                 About us
               </Link>
             </li>
@@ -69,107 +69,107 @@ const MiddleHeader = () => {
                   <div className="menuWrap">
                     <ul className="canvaMenu">
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Harness &amp; Belts
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Lanyards
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Hooks &amp; Connectors
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Retractable Fall Arrest Blocks
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Rope Access &amp; Rescue
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Confined Space Equipments
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Temporary Lifeline System
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Fixed Line Systems
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Anchorage
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Walkways
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Handrail Protection
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Aluminium Skylight Protection System
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Protective Mask
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Coverall Suit
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Net &amp; Rope Ladder
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Rescue &amp; Evacuation System
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           UFS Safety Shoes
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Eye Protection
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Ear Protection
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Head Protection
                         </Link>
                       </li>
                       <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" path="/">
+                        <Link className="canvaMenuLink" to="/">
                           Welding Protection
                         </Link>
                       </li>
@@ -179,17 +179,17 @@ const MiddleHeader = () => {
                 </Offcanvas>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" path="career.php">
+              <Link className="nav-link" to="career.php">
                 Career
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" path="certifications.php">
+              <Link className="nav-link" to="certifications.php">
                 Certifications
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" path="contact-us.php">
+              <Link className="nav-link" to="contact-us.php">
                 Contact Us
               </Link>
             </li>
