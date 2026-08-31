@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageBanner from "../components/pagebanner/PageBanner";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const ContactUs = () => {
   const contactItems = [
     {
@@ -130,27 +131,54 @@ const ContactUs = () => {
     },
   ];
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [city, setCity] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/contact", {
+        name,
+        email,
+        phone,
+        city,
+      });
+
+      console.log(response.data);
+
+      alert("Request sent successfully!");
+
+      // Form clear
+      setName("");
+      setEmail("");
+      setPhone("");
+      setCity("");
+    } catch (error) {
+      console.error(error);
+
+      alert("Something went wrong!");
+    }
+  };
 
   const nameHandle = (e) => {
-    setName(e.target.value)
-  }
+    setName(e.target.value);
+  };
   const emailHandle = (e) => {
-    setEmail(e.target.value)
-  }
+    setEmail(e.target.value);
+  };
   const phoneHandle = (e) => {
-    if(e.target.value.length <= 10){
-      setPhone(e.target.value)
-    }else{
-      console.log('Maximum ')
+    if (e.target.value.length <= 10) {
+      setPhone(e.target.value);
+    } else {
+      console.log("Maximum ");
     }
-  }
+  };
   const cityHandle = (e) => {
-    setCity(e.target.value)
-  }
+    setCity(e.target.value);
+  };
   return (
     <div>
       <PageBanner pagetitle="Contact Us" />
@@ -170,19 +198,31 @@ const ContactUs = () => {
                   <h4>Let's Connect – Fill Out the Form</h4>
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="row g-4">
                     <div className="col-md-6">
-                      <input type="text" onChange={nameHandle} value={name} placeholder="Your Name*" required />
+                      <input
+                        type="text"
+                        onChange={nameHandle}
+                        value={name}
+                        placeholder="Your Name*"
+                        required
+                      />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="email" onChange={emailHandle} value={email} placeholder="Email*" required />
+                      <input
+                        type="email"
+                        onChange={emailHandle}
+                        value={email}
+                        placeholder="Email*"
+                        required
+                      />
                     </div>
 
                     <div className="col-12">
                       <input
-                        type="number"
+                        type="tel"
                         onChange={phoneHandle}
                         value={phone}
                         placeholder="Your Mobile Number*"
@@ -191,7 +231,13 @@ const ContactUs = () => {
                     </div>
 
                     <div className="col-12">
-                      <input type="text" onChange={cityHandle} value={city} placeholder="Your City*" required />
+                      <input
+                        type="text"
+                        onChange={cityHandle}
+                        value={city}
+                        placeholder="Your City*"
+                        required
+                      />
                     </div>
 
                     <div className="col-12">
@@ -217,9 +263,9 @@ const ContactUs = () => {
                         <span>{contactinfo.label}</span>
                         {contactinfo.links?.map((newLinks) => {
                           return (
-                            <Link key={newLinks.href} to={newLinks.href}>
+                            <a key={newLinks.href} href={newLinks.href}>
                               {newLinks.text}
-                            </Link>
+                            </a>
                           );
                         })}
                         {contactinfo.address && <p>{contactinfo.address}</p>}

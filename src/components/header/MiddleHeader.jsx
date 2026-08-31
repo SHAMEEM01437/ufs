@@ -1,31 +1,21 @@
-
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
-import BrandLogo from  '../../assets/images/logo.png'
-import BrandLogoDark from  '../../assets/images/dark-logo.png'
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link } from "react-router-dom";
+import BrandLogo from "../../assets/images/logo.png";
+import BrandLogoDark from "../../assets/images/dark-logo.png";
 const MiddleHeader = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);  
+  const handleShow = () => setShow(true);
 
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
-        
         <Link className="navbar-brand" to="/">
-          <img
-            src={BrandLogo}
-            alt="Brand Name"
-            className="light_logo"
-          />
-          <img
-            src={BrandLogoDark}
-            alt="Brand Name"
-            className="dark_logo"
-          />
+          <img src={BrandLogo} alt="Brand Name" className="light_logo" />
+          <img src={BrandLogoDark} alt="Brand Name" className="dark_logo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -51,132 +41,425 @@ const MiddleHeader = () => {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link
-                className="nav-link"
-                onClick={handleShow}
-              >
-                Products
-              </Link>
-               <Offcanvas show={show} onHide={handleClose}>
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Products</Offcanvas.Title>
-                    <button
-                    type="button"
-                    onClick={handleClose}
-                  ></button>
-                  </Offcanvas.Header>
-                  <div className="offcanvas-body">
-                  <div className="menuWrap">
-                    <ul className="canvaMenu">
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Harness &amp; Belts
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Lanyards
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Hooks &amp; Connectors
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Retractable Fall Arrest Blocks
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Rope Access &amp; Rescue
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Confined Space Equipments
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Temporary Lifeline System
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Fixed Line Systems
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Anchorage
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Walkways
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Handrail Protection
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Aluminium Skylight Protection System
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Protective Mask
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Coverall Suit
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Net &amp; Rope Ladder
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Rescue &amp; Evacuation System
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          UFS Safety Shoes
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Eye Protection
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Ear Protection
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Head Protection
-                        </Link>
-                      </li>
-                      <li className="canvaMenuItem">
-                        <Link className="canvaMenuLink" to="/">
-                          Welding Protection
-                        </Link>
-                      </li>
-                    </ul>
+              <Link className="nav-link">Products</Link>
+              <section class="headerTwo_maga_menu">
+                <div class="container">
+                  <div class="headerTwo_destination_list">
+                    <div class="menuLeftbar">
+                      <ul>
+                        <h4 class="country_title">Products</h4>
+
+                        <div class="colTwo">
+                          <li
+                            class="countryMenu_tb_item hasData active"
+                            data-action="no"
+                          >
+                            <a class="mega_mune_link" data-action="no">
+                              Harness &amp; Belts
+                            </a>
+                            <div class="menuRightbar">
+                              <div class="countryMenu_tb_panel">
+                                <ul>
+                                  <h4>UFS Nero series</h4>
+
+                                  <div class="colTwo moreThanFive">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-15
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-15
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-25
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-26
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-27
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-27A (QR)
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-28
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-29
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-30
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-52
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-55
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-101
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-102
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+
+                                <ul>
+                                  <h4>UFS Elite series</h4>
+
+                                  <div class="colTwo moreThanSeven moreThanFive">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-115
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-116
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-125
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-126
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-127
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-160
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-160A
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+
+                                <ul>
+                                  <h4>UFS Pro series</h4>
+
+                                  <div class="colTwo moreThanSeven">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-52M
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-125M
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-127M
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+                                <ul>
+                                  <h4>UFS Max series</h4>
+
+                                  <div class="colTwo moreThanSeven">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-JH21
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-160A
+                                      </a>
+                                    </li>
+
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        USP-505
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+                                <ul>
+                                  <h4>Suspension Trauma</h4>
+
+                                  <div class="colTwo moreThanSeven">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        Suspension Trauma
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+                                <ul>
+                                  <h4>UFS Prime</h4>
+
+                                  <div class="colTwo moreThanSeven">
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        SURAKHSA-01
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        SURAKSHA-RT 02
+                                      </a>
+                                    </li>
+                                    <li data-action="yes">
+                                      <a
+                                        class="mega_mune_link"
+                                        data-action="yes"
+                                      >
+                                        SURAKHSA-02
+                                      </a>
+                                    </li>
+                                  </div>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Lanyards
+                            </a>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Hooks &amp; Connectors
+                            </a>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Retractable Fall Arrest Blocks
+                            </a>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Rope Access &amp; Rescue
+                            </a>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Confined Space Equipments
+                            </a>
+                          </li>
+
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Temporary Lifeline System
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Fixed Line Systems
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Anchorage
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Walkways
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Aluminium Skylight Protection System
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Protective Mask
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Coverall Suit
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Net &amp; Rope Ladder
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Rescue &amp; Evacuation System
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              UFS Safety Shoes
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Eye Protection
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Ear Protection
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Head Protection
+                            </a>
+                          </li>
+                          <li class="countryMenu_tb_item" data-action="no">
+                            <a class="mega_mune_link" data-action="no">
+                              Welding Protection
+                            </a>
+                          </li>
+                        </div>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                </Offcanvas>
+              </section>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/career">
