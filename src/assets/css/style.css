@@ -345,7 +345,7 @@ Navbar
     top: 55%;
     transform: translateY(-50%);
     font-size: 18px;
-    color:var(--theme_white_color);
+    color:#000;
     transition:0.2s;
     font-weight: 400;
 }
