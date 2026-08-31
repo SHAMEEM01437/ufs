@@ -1792,6 +1792,7 @@ Map section
     background: #fff;
     border-radius: 16px;
     position: relative;
+    overflow: hidden;
 }
 .left_aside {
     width: 320px;

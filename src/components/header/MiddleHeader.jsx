@@ -179,17 +179,17 @@ const MiddleHeader = () => {
                 </Offcanvas>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="career.php">
+              <Link className="nav-link" to="/career">
                 Career
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="certifications.php">
+              <Link className="nav-link" to="/certifications">
                 Certifications
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="contact-us.php">
+              <Link className="nav-link" to="contact-us">
                 Contact Us
               </Link>
             </li>

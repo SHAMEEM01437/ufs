@@ -1,9 +1,9 @@
-import React from 'react'
+import PageBanner from '../components/pagebanner/PageBanner'
 
 const About = () => {
   return (
     <div>
-      About
+      <PageBanner pagetitle="About Us" />
     </div>
   )
 }
